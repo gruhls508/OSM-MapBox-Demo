@@ -13,7 +13,23 @@
 		51DC18211CA0C46B00D01765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DC181F1CA0C46B00D01765 /* Main.storyboard */; };
 		51DC18231CA0C46B00D01765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51DC18221CA0C46B00D01765 /* Assets.xcassets */; };
 		51DC18261CA0C46B00D01765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DC18241CA0C46B00D01765 /* LaunchScreen.storyboard */; };
+		51DC182E1CA0C52800D01765 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DC182D1CA0C52800D01765 /* Mapbox.framework */; };
+		51DC182F1CA0C52800D01765 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51DC182D1CA0C52800D01765 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51DC18301CA0C52900D01765 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51DC182F1CA0C52800D01765 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		51DC18131CA0C46B00D01765 /* OSM-MapBox Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSM-MapBox Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +42,7 @@
 		51DC18221CA0C46B00D01765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51DC18251CA0C46B00D01765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51DC18271CA0C46B00D01765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51DC182D1CA0C52800D01765 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DC182E1CA0C52800D01765 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 		51DC180A1CA0C46B00D01765 = {
 			isa = PBXGroup;
 			children = (
+				51DC182D1CA0C52800D01765 /* Mapbox.framework */,
 				51DC18151CA0C46B00D01765 /* OSM-MapBox Demo */,
 				51DC18141CA0C46B00D01765 /* Products */,
 			);
@@ -89,6 +108,7 @@
 				51DC180F1CA0C46B00D01765 /* Sources */,
 				51DC18101CA0C46B00D01765 /* Frameworks */,
 				51DC18111CA0C46B00D01765 /* Resources */,
+				51DC18301CA0C52900D01765 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "OSM-MapBox Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intradine.OSM-MapBox-Demo";
@@ -272,6 +296,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "OSM-MapBox Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intradine.OSM-MapBox-Demo";
