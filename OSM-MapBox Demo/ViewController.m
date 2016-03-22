@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PointMaker.h"
 @import Mapbox;
 
 
@@ -20,12 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    MGLPointAnnotation *point = [[MGLPointAnnotation alloc] init];
-    point.coordinate = CLLocationCoordinate2DMake(45.52258, -122.6732);
-    point.title = @"Voodoo Doughnut";
-    point.subtitle = @"22 SW 3rd Avenue Portland Oregon, U.S.A.";
 
-    [self.mapView addAnnotation:point];
+    /*  
+        Now I need some way of generating a bunch of these.
+        Will start by making subclass "pointMaker" that will create an array
+        of 'point' objects and pass that array to ViewController to be used
+        on _mapView. 
+    */
+
+      NSArray *pointArray = [PointMaker pointArray];
+      for (MGLPointAnnotation *point in pointArray) {
+
+          [self.mapView addAnnotation:point];
+      }
+
 }
 
 - (BOOL)mapView:(MGLMapView *)mapView annotationCanShowCallout:(id <MGLAnnotation>)annotation {

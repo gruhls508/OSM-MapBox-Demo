@@ -15,6 +15,7 @@
 		51DC18261CA0C46B00D01765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DC18241CA0C46B00D01765 /* LaunchScreen.storyboard */; };
 		51DC182E1CA0C52800D01765 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DC182D1CA0C52800D01765 /* Mapbox.framework */; };
 		51DC182F1CA0C52800D01765 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51DC182D1CA0C52800D01765 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		51DC18381CA0D52F00D01765 /* PointMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DC18371CA0D52F00D01765 /* PointMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		51DC18251CA0C46B00D01765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51DC18271CA0C46B00D01765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51DC182D1CA0C52800D01765 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		51DC18361CA0D52F00D01765 /* PointMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointMaker.h; sourceTree = "<group>"; };
+		51DC18371CA0D52F00D01765 /* PointMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +80,11 @@
 		51DC18151CA0C46B00D01765 /* OSM-MapBox Demo */ = {
 			isa = PBXGroup;
 			children = (
+				51DC18331CA0D50100D01765 /* MVC */,
+				51DC18321CA0D4F300D01765 /* Utilities */,
+				51DC18311CA0D4E100D01765 /* IB */,
 				51DC18191CA0C46B00D01765 /* AppDelegate.h */,
 				51DC181A1CA0C46B00D01765 /* AppDelegate.m */,
-				51DC181C1CA0C46B00D01765 /* ViewController.h */,
-				51DC181D1CA0C46B00D01765 /* ViewController.m */,
-				51DC181F1CA0C46B00D01765 /* Main.storyboard */,
-				51DC18221CA0C46B00D01765 /* Assets.xcassets */,
-				51DC18241CA0C46B00D01765 /* LaunchScreen.storyboard */,
-				51DC18271CA0C46B00D01765 /* Info.plist */,
 				51DC18161CA0C46B00D01765 /* Supporting Files */,
 			);
 			path = "OSM-MapBox Demo";
@@ -96,6 +96,51 @@
 				51DC18171CA0C46B00D01765 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51DC18311CA0D4E100D01765 /* IB */ = {
+			isa = PBXGroup;
+			children = (
+				51DC18241CA0C46B00D01765 /* LaunchScreen.storyboard */,
+				51DC181F1CA0C46B00D01765 /* Main.storyboard */,
+			);
+			name = IB;
+			sourceTree = "<group>";
+		};
+		51DC18321CA0D4F300D01765 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				51DC18221CA0C46B00D01765 /* Assets.xcassets */,
+				51DC18271CA0C46B00D01765 /* Info.plist */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		51DC18331CA0D50100D01765 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				51DC18351CA0D51D00D01765 /* Model */,
+				51DC18341CA0D50700D01765 /* ViewController */,
+			);
+			name = MVC;
+			sourceTree = "<group>";
+		};
+		51DC18341CA0D50700D01765 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				51DC181C1CA0C46B00D01765 /* ViewController.h */,
+				51DC181D1CA0C46B00D01765 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		51DC18351CA0D51D00D01765 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51DC18361CA0D52F00D01765 /* PointMaker.h */,
+				51DC18371CA0D52F00D01765 /* PointMaker.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DC181E1CA0C46B00D01765 /* ViewController.m in Sources */,
+				51DC18381CA0D52F00D01765 /* PointMaker.m in Sources */,
 				51DC181B1CA0C46B00D01765 /* AppDelegate.m in Sources */,
 				51DC18181CA0C46B00D01765 /* main.m in Sources */,
 			);
